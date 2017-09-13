@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
 import java.io.IOException;
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -34,6 +35,8 @@ public class JsonToDomainTest {
     @Test
     public void JSON_TO_JAVA_DOMAIN_TEST () throws IOException {
         Student student = objectMapper.readValue(jsonFile, Student.class);
+
+        assertNotNull(student);
         logger.debug(student.toString());
     }
 
