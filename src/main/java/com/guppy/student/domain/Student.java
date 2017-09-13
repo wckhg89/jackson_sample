@@ -1,4 +1,4 @@
-package com.guppy.domain;
+package com.guppy.student.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

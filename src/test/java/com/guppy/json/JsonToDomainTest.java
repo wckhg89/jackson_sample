@@ -1,7 +1,7 @@
 package com.guppy.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.guppy.domain.Student;
+import com.guppy.student.domain.Student;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
