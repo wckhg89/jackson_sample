@@ -69,6 +69,7 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.0</version>
 			<!-- 잭슨 코어 및 어노테이션과 버전 호환성 이슈가 있어 명시적으로 의존성 추가 -->
+			<!-- ref : https://dzone.com/articles/jackson-dependency-issue-in-spring-boot-with-maven-->
 			<exclusions>
 				<exclusion>
 					<groupId>com.fasterxml.jackson.core</groupId>

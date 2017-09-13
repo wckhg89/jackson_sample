@@ -3,7 +3,6 @@ package com.guppy.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -24,10 +23,10 @@ public class RestConfig {
         return new ObjectMapper();
     }
 
-
     @Bean
     public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter (ObjectMapper objectMapper) {
-        MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
+        MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter
+                = new MappingJackson2HttpMessageConverter();
         mappingJackson2HttpMessageConverter.setObjectMapper(objectMapper);
 
         return mappingJackson2HttpMessageConverter;
@@ -44,8 +43,6 @@ public class RestConfig {
         return factory;
     }
 
-//    @Bean(name="customRestTemplate")
-//    @Primary
     @Bean
     public RestTemplate restTemplate (HttpComponentsClientHttpRequestFactory factory,
                                       MappingJackson2HttpMessageConverter jackson2HttpMessageConverter) {
@@ -60,6 +57,5 @@ public class RestConfig {
 
         return restTemplate;
     }
-
 
 }
