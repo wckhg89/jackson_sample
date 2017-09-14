@@ -44,4 +44,23 @@ public class MockMvcTest {
                 .andExpect(status().isOk())
                 .andDo(print());
     }
+
+    @Test
+    public void getText() throws Exception {
+        this.mockMvc
+                .perform(get("/students/text")
+                        .contentType(MediaType.TEXT_PLAIN))
+                .andExpect(status().isOk())
+                .andDo(print());
+
+    }
+
+    @Test
+    public void getTemplate () throws Exception {
+        this.mockMvc
+                .perform(get("/")
+                        .contentType(MediaType.TEXT_HTML))
+                .andExpect(status().isOk())
+                .andDo(print());
+    }
 }

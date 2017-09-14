@@ -1,5 +1,6 @@
 package com.guppy.student.repository;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.guppy.student.domain.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

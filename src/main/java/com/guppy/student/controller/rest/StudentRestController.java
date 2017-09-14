@@ -23,7 +23,14 @@ public class StudentRestController {
 
     @GetMapping("/one")
     public ResponseEntity<Student> getStudent () {
-        return studentService.getStudent();
+        ResponseEntity<Student> std = studentService.getStudent();
+
+        return std;
+    }
+
+    @GetMapping("/text")
+    public String getText () {
+        return "guppy.kang";
     }
 
 
