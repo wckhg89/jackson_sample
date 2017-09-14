@@ -1,5 +1,10 @@
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+
 logging:
   level:
-    ROOT: ERROR
-    org.springfraomework: ERROR
+    ROOT: DEBUG
+    org.springfraomework: DEBUG
     com.guppy: DEBUG
