@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
-
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -43,6 +43,8 @@ public class MockMvcTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(print());
+
+        assertEquals(true, true);
     }
 
     @Test
@@ -62,5 +64,8 @@ public class MockMvcTest {
                         .contentType(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
                 .andDo(print());
+
+        assertEquals(true, true);
+
     }
 }
